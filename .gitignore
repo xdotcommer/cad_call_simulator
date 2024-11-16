@@ -1,0 +1,84 @@
+# Byte-compiled files
+*.py[cod]
+__pycache__/
+*.so
+
+# Virtual environment directories
+env/
+venv/
+ENV/
+.VENV/
+
+# Distribution/packaging
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment files
+.env
+.env.*
+*.ini
+*.cfg
+
+# IDE and editor settings
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Aider-related files
+.aider.chat.history.md
+.aider.input.history
+
+# Docker-related files
+*.pid
+*.sock
+logs/
+
+# Miscellaneous
+*.orig
+*.rej
+*.db
+*.sqlite3
+
+# Python tooling
+.mypy_cache/
+.pytest_cache/
+.pytype/
+.tox/
+noxfile_config.json
+
+# Temporary and backup files
+~$*
+*.~*
+*.bak
+*.tmp
+
