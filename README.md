@@ -116,7 +116,7 @@ Want to contribute? Here's how to set up the project for development:
 ```bash
 # Clone the repository
 git clone https://github.com/xdotcommer/cad_call_simulator.git
-cd ad_call_simulator
+cd cad_call_simulator
 
 # Create a virtual environment
 python3 -m venv venv
