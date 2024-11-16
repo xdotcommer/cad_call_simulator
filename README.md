@@ -136,3 +136,16 @@ python simulator.py
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## Related Services
+
+- [CAD Call Simulator](https://github.com/xdotcommer/cad-call-simulator) - A Python tool for simulating incident data
+- [Call Service](https://github.com/xdotcommer/call_service) - Main call processing service
+- [APCO Service](https://github.com/xdotcommer/apco_incident_types_service) - APCO code lookup service
+- [Call Logger](https://github.com/xdotcommer/call_logger) - Persistent storage service for emergency call data
+
+This microservices ecosystem provides a complete solution for:
+- Simulating emergency calls (CAD Call Simulator)
+- Processing and routing calls (Call Service)
+- Standardizing call types (APCO Service)
+- Storing call history (Call Logger)
