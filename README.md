@@ -109,6 +109,45 @@ The simulator handles:
 - Invalid response data
 - Server errors
 
+## Basic Architecure
+```mermaid
+flowchart TD
+    subgraph ExternalSystem [External System]
+        CADApp["CAD Application"]
+    end
+
+    subgraph CallService [Call Service]
+        CallAPI["Call API"]
+    end
+
+    subgraph CallLoggerService [Call Logger Service]
+        CallLoggerAPI["Call Logger API"]
+        CallLoggerDB["Call Logger DB"]
+    end
+
+    subgraph APCOService [APCO Incident Type Service]
+        APCOAPI["APCO API"]
+        APCODB["APCO DB (Redis)"]
+        FuzzyLookup["Fuzzy Lookup Engine"]
+    end
+
+    subgraph CallDashboard [Call Dashboard]
+        DashboardAPI["Dashboard API"]
+        DashboardUI["Dashboard UI"]
+    end
+
+    %% Connections
+    ExternalSystem -->|STEP 1: POST /api/v1/call| CallAPI
+    CallAPI -->|STEP 3: POST /api/v1/log| CallLoggerAPI
+    CallAPI <-->|STEP 2: GET /api/v1/call_types/:string| APCOAPI
+    APCOAPI -->|Call Type| FuzzyLookup
+    APCOAPI <--> APCODB
+    CallLoggerAPI <--> CallLoggerDB
+    CallLoggerAPI -->|STEP 4: GET /api/v1/data| DashboardAPI
+```
+[Prettier Version](./architecture-diagram.jpg)
+
+
 ## Development
 
 Want to contribute? Here's how to set up the project for development:
